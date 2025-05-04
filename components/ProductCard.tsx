@@ -1,11 +1,12 @@
 "use client"
 import React from 'react'
 import clsx from 'clsx';
-import { CheckCheck, CircleDashed, History } from 'lucide-react';
+import { CheckCheck, CircleDashed, History, Minus } from 'lucide-react';
 
 interface productCardProps{
     title: string;
     text:string;
+    count?:string;
     date: string;
     action?: string;  
     status: string;
@@ -14,7 +15,7 @@ interface productCardProps{
    
 }
 
-export default function ProductCard({title, text, status, date, background="", action="",handleClick}: productCardProps) {
+export default function ProductCard({title, text, status, date, count="", background="", action="",handleClick}: productCardProps) {
   return (
     <section className={`flex items-center justify-between bg-${background} p-4 rounded-2xl mb-4`}>
         <div className=''>
@@ -37,7 +38,24 @@ export default function ProductCard({title, text, status, date, background="", a
                    
                 </div>
             </div>
-            <p className='text-[#737373] text-xs'>{text} <span className='rotate-90'>–</span> Date: {date}</p>
+            <p className="text-[#737373] text-xs flex items-center gap-2">
+  {text && <span>{text}</span>}
+
+  {count && (
+    <>
+      <span className="h-2 w-px bg-[#737373]" /> {/* Vertical Divider */}
+      <span>{count}</span> 
+    </>
+  )}
+
+  {date && (
+    <>
+      <span className="h-2 w-px bg-[#737373]" /> {/* Another Divider */}
+      <span>Date: {date}</span>
+    </>
+  )}
+</p>
+
         </div>
         <button className='text-xs text-[#3E5773]' onClick={handleClick} >{action}</button>
     </section>

@@ -27,7 +27,7 @@ export default function History() {
                 date={item.date} 
                 action={item.action}
                 handleClick={() => alert('clicked')}
-             background='white'
+                background='white'
 
                 
                 />

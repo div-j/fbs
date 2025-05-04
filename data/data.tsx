@@ -5,7 +5,8 @@
         text:"Cycle Count",
         status:"Completed",
         action:"",
-        date:"12/17/2026",        
+        date:"12/17/2026",  
+          
     },
     {
         id: 2,
@@ -41,7 +42,9 @@ export const assignedData = [
         text:"Cycle Count",
         status:"Ongoing",
         action:"Resume",
-        date:"11 Counts",        
+        count:"11 Count",   
+        date:"12/17/2026",
+
     },
     {
         id: 2,
@@ -49,7 +52,8 @@ export const assignedData = [
         text:"Cycle Count",
         status:"Pending",
         action:"Start",
-        date:"0 Counts",        
+        date:"12/17/2026",
+        count:"0 Count",        
     },
     {
         id: 3,
@@ -57,7 +61,8 @@ export const assignedData = [
         text:"Cycle Count",
         status:"Pending",
         action:"Start",
-        date:"0 Counts",        
+        date:"12/17/2026",
+        count:"AC011",        
     },
     {
         id: 4,
@@ -65,7 +70,8 @@ export const assignedData = [
         text:"Cycle Count",
         status:"Pending",
         action:"Start",
-        date:"0 Counts",        
+        date:"12/17/2026",
+        count:"AC011",        
     },
     {
         id: 5,
@@ -73,7 +79,8 @@ export const assignedData = [
         text:"Cycle Count",
         status:"Pending",
         action:"Start",
-        date:"0 Counts",        
+        date:"12/17/2026",
+        count:"AC011",        
     },
     {
         id: 6,
@@ -81,7 +88,8 @@ export const assignedData = [
         text:"Cycle Count",
         status:"Pending",
         action:"Start",
-        date:"0 Counts",        
+        date:"12/17/2026",
+        count:"AC011",        
     },
     {
         id: 7,
@@ -89,7 +97,8 @@ export const assignedData = [
         text:"Cycle Count",
         status:"Pending",
         action:"Start",
-        date:"0 Counts",        
+        date:"12/17/2026",
+        count:"AC011",        
     },
     {
         id: 8,
@@ -97,6 +106,7 @@ export const assignedData = [
         text:"Cycle Count",
         status:"Pending",
         action:"Start",
-        date:"0 Counts",        
+        date:"12/17/2026",
+        count:"AC011",        
     }
 ]

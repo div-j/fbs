@@ -1,5 +1,5 @@
 import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
-import { X } from 'lucide-react'
+import { CircleDashed, X } from 'lucide-react'
 import { useState } from 'react'
 
 interface CounterModalProps {
@@ -32,48 +32,46 @@ export default function CounterModal({ isOpen, handleClose }: CounterModalProps)
                         </div>
 
                         <div>
-                            <h3 className="text-sm font-semibold ">Sub Session Name</h3>
+                            <h3 className="text-sm font-bold ">Sub Session Name</h3>
                             <p className="mt-1 ">CC - Q1 2024-WH_1</p>
                         </div>
 
+                        <div className='flex flex-col gap-2'>
+                            <h3 className="text-sm font-bold ">Status</h3>
+                            <div className={
+                    " flex items-center justify-center text-xs gap-1 bg-[#C0D6F2] text-[#0c4a6e]  rounded-full px-2 py-1 max-w-32"
+                }>
+                       
+                       Ongoing  <CircleDashed size={15}/> 
+                   
+                </div>
+
+                        </div>
                         <div>
-                            <h3 className="text-sm font-semibold t">Status</h3>
-                            <ul className="mt-1 space-y-1">
-                                <li className="flex items-center">
-                                    <span className="inline-block w-2 h-2 mr-2 bg-blue-500 rounded-full"></span>
-                                    Ongoing
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="inline-block w-2 h-2 mr-2  rounded-full"></span>
+                        <h3 className="font-bold ">
                                     Product type
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="inline-block w-2 h-2 mr-2 text-gray-500 rounded-full"></span>
+                                </h3>
+                                <p className="mt-1 text-gray-500 ">
                                     Raw Material
-                                </li>
-                            </ul>
+                                </p>
                         </div>
 
                         <div>
-                            <h3 className="text-sm font-semibold text-gray-500">Count Lead</h3>
-                            <ul className="mt-1 space-y-1">
-                                <li className="flex items-center">
-                                    <span className="inline-block w-2 h-2 mr-2 bg-gray-300 rounded-full"></span>
-                                    Miles Kalk
-                                </li>
-                            </ul>
+                            <h3 className="text-sm font-bold ">Count Lead</h3>
+                            <div className="mt-1 flex items-center gap-2">
+                            <img src="assets/avatar.png" className="w-6 h-6"/>
+                            <span className='text-gray-500'>Miles Kelk</span>   
+                            </div>
                         </div>
-
                         <div>
-                            <h3 className="text-sm font-semibold text-gray-500">Counter</h3>
-                            <ul className="mt-1 space-y-1">
-                                <li className="flex items-center">
-                                    <span className="inline-block w-2 h-2 mr-2 bg-gray-300 rounded-full"></span>
-                                    Miles Kalk
-                                </li>
-                            </ul>
+                            <h3 className="text-sm font-bold ">Counter</h3>
+                            <div className="mt-1 flex items-center gap-2">
+                            <img src="assets/avatar.png" className="w-6 h-6"/>
+                            <span className='text-gray-500'>Miles Kelk</span>   
+                            </div>
                         </div>
 
+                      
                         <div>
                             <h3 className="text-sm font-semibold ">Timeline</h3>
                             <p className="mt-1 text-gray-500">18/12/2025 - 18/12/2025</p>
@@ -81,7 +79,9 @@ export default function CounterModal({ isOpen, handleClose }: CounterModalProps)
 
                         <div>
                             <h3 className="text-sm font-semibold ">Tracking</h3>
-                            <p className="mt-1 text-gray-500">Barcode</p>
+                            <p className="mt-1 text-gray-500 flex items-center gap-2">Barcode
+                                <img src="assets/radio-circle-check.png" alt=""  className='w-6 h-6'/>
+                            </p>
                         </div>
                     </div>
                 </DialogPanel>

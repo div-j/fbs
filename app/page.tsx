@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import { Header } from "./components/Header";
-import { StatusCard } from "./components/StatusCard";
-import Session from "./components/Session";
-import History from "./components/History";
+import { Header } from "../components/Header";
+import { StatusCard } from "../components/StatusCard";
+import Session from "../components/Session";
+import History from "../components/History";
 
 export default function Home() {
   

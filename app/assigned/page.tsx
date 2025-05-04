@@ -2,10 +2,11 @@
 import { Switch } from "@headlessui/react";
 import React, { useState } from "react";
 import Header from "./components/Header";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../../components/ProductCard";
 import { Search } from "lucide-react";
 import { assignedData } from "@/data/data";
 import { AssignSessions } from "./components/AssignSessions";
+import CountTableData from "./components/Counts";
 
 export default function page() {
   return (
@@ -17,6 +18,7 @@ export default function page() {
         </h1>
       </div>
       <AssignSessions />
+
 
     
     </div>

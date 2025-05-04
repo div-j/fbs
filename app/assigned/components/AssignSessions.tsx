@@ -2,19 +2,24 @@ import React, { useState } from 'react'
 import { Switch } from "@headlessui/react";
 import { Search } from "lucide-react";
 import { assignedData } from "@/data/data";
-import ProductCard from '@/app/components/ProductCard';
+import ProductCard from '@/components/ProductCard';
+import { useRouter } from 'next/navigation';
+import CountTableData from './Counts';
 
 export  function AssignSessions() {
       const [enabled, setEnabled] = useState(false);
+        const router = useRouter();
     
   return (
     <main className="px-6">
     <section className="mt-6 mb-4">
-      <div className="flex gap-4 items-center justify-between">
-        <h2 className="text-lg font-bold w-1/2">Assigned Sessions</h2>
-        <div className=" rounded-full gap-4  p-2 flex items-center justify-center ">
+      <div className="flex  items-center justify-between w-full">
+        <h2 className="text-lg font-bold w-[80%] ">{
+          enabled? 'Counts' : 'Assigned Sessions'
+          }</h2>
+        <div className=" rounded-full gap-3   flex items-center justify-center w-[40%] sm:w-[10%] ">
           {/* toggle switch */}
-          <span className="text-xs text-[#3E5773]">All counts</span>
+          <span className="text-[13px] text-[#3E5773]">All counts</span>
           <Switch
               checked={enabled}
               onChange={setEnabled}
@@ -40,7 +45,11 @@ export  function AssignSessions() {
         placeholder="Search..."
       />
     </div>
-        <section>
+    {
+      enabled?
+      <CountTableData />
+      : (
+<section>
                 {assignedData.map((item) => (
                     <ProductCard 
                     key={item.id} 
@@ -49,13 +58,17 @@ export  function AssignSessions() {
                     status={item.status} 
                     date={item.date} 
                     action={item.action}
-                    handleClick={() => alert('clicked')}
+                    count={item.count}
+                    handleClick={() => router.push('/start-count')}
                  background='white'
-    
-                    
                     />
-                ))}  
+                ))
+                }  
             </section>
+      )
+    }
+        
+
   </main>
   )
 }
